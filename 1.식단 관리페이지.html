@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단추</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"  rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body >
+ <style> 
+ 
+ </style>
+    <div class="flex h-screen w-full bg-gray-800 " x-data="{openMenu:1}">
+        <!--Start SideBar-->
+        <aside class="animate__animated animate__fadeInLeft w-16 relative z-20 flex-shrink-0  px-2 overflow-y-auto sm:block" style="background-color: #b3d400;">
+            <div class="mb-6">
+                <!--Start logo -->
+                <div class="flex justify-center">
+                  <div class="w-14 h-14 rounded-full bg-gray-300 border-2 border-white mt-2">
+                    <img 
+                      src="단추.png" 
+                     class="rounded-full w-auto"
+                    />
+                  </div>
+                </div>
+                <!--End logo -->
+                <!--Start NavItem -->
+                <div>
+                  <ul class="mt-6 leading-10 px-1">
+                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                        <i class="fas fa-utensils fa-lg" style="color: #97b300;"></i>
+                    </li>
+
+                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                        <i class="fas fa-calendar-alt fa-lg" style="color: #97b300;"></i>
+                    </li>
+
+                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                        <i class="fas fa-user-md fa-lg" style="color: #97b300;"></i>
+                    </li>
+
+                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                        <i class="fas fa-comment fa-lg" style="color: #97b300;"></i>
+                    </li>
+        
+                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                      <i class="fas fa-shopping-basket fa-lg" style="color: #97b300;"></i>
+                    </li>
+
+                  </ul>
+                </div>
+                <!--End NavItem -->
+            </div>
+        </aside>
+
+        
+        <!-- End Sidebar -->
+        <div class="flex flex-col flex-1 w-full overflow-y-auto">
+            <!--Start Topbar -->
+            <!--End Topbar -->
+          <main class="relative z-0 flex-1 pb-8 px-5 bg-white">
+              <div class="grid pb-10  mt-4 ">
+                  <!-- Start Content-->
+                    <div class="mb-2">
+                      <p class="text-2xl font-bold">나만의  식단 추천</p>
+                    </div>
+                    <div class="grid grid-cols-12 gap-6 border-b-2 pb-5">
+                      <div class="col-span-12 sm:col-span-12 md:col-span-8 lg:col-span-8 xxl:col-span-8">
+                        <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 mt-3">
+                           <div class="p-4">
+                              <p class="text-xl font-bold">- kg</p>
+                              <p class="text-xs font-semibold text-gray-400">체중</p>
+                           </div>
+                           <div class="p-4">
+                              <p class="text-xl font-bold">- cm</p>
+                              <p class="text-xs font-semibold text-gray-400">신장</p>
+                           </div>
+                           <div class="p-4">
+                              <p class="text-xl font-bold">- Kcal</p>
+                              <p class="text-xs font-semibold text-gray-400">오늘의 칼로리 </p>
+                           </div>
+                           <div class=" p-4">
+                              <p class="text-xl font-bold">- Kcal</p>
+                              <p class="text-xs font-semibold text-gray-400">권장칼로리</p>
+                           </div>
+                        </div>
+                      </div>
+                      <div class="col-span-12 sm:col-span-12 md:col-span-4 lg:col-span-4 xxl:col-span-4">
+                          <div class="p-4">
+                              <p class="text-sm text-gray-400">칼로리 섭취량</p>
+                              <div class="shadow w-full bg-gray-100 mt-2">
+                                  <div class="bg-indigo-600 text-xs leading-none py-1 text-center text-white" style="width: 55%"></div>
+                               </div>
+                                <p class="text-xs font-semibold text-gray-400 mt-2">칼로리 확인</p>
+                           </div>
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 mt-3">
+                      <div class="relative w-full h-52 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                          <div class="absolute inset-0 bg-pink-900 bg-opacity-75 transition duration-300 ease-in-out"></div>
+                          <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex items-center justify-center">
+                            <div>
+                              <h3 class="text-center text-white text-lg">
+                                   Total Kcal
+                              </h3>
+                              <h3 class="text-center text-white text-3xl mt-2 font-bold">
+                                   - Kcal
+                              </h3>
+                              <div class="flex space-x-4 mt-4">
+                                 <button class="block uppercase mx-auto shadow bg-white text-indigo-600 focus:shadow-outline 
+                                  focus:outline-none text-white text-xs py-3 px-4 rounded font-bold">
+                                  체중 기입
+                                </button>
+                                <button class="block uppercase mx-auto shadow bg-indigo-800 hover:bg-indigo-700 focus:shadow-outline 
+                                   focus:outline-none text-white text-xs py-3 px-4 rounded font-bold">
+                                  목표 칼로리
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                       <div class="relative w-full h-52 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                          <div class="absolute inset-0 bg-yellow-600 bg-opacity-75 transition duration-300 ease-in-out"></div>
+                            <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex items-center">
+                            <div>
+                              <div class="text-white text-lg flex space-x-2 items-center">
+                                <div class="bg-white rounded-md p-2 flex items-center">
+                                  <i class="fas fa-toggle-off fa-sm text-yellow-300"></i>
+                                </div>
+                                <p>식단 관리사</p>
+                              </div>
+                              <h3 class="text-white text-3xl mt-2 font-bold">
+                                  월 49,999,999,999원
+                              </h3>
+                               <h3 class="text-white text-lg mt-2 text-yellow-100 ">
+                                  구독중
+                              </h3>
+                            </div>
+                          </div>
+                      </div>
+                       <div class="relative w-full h-52 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg transition duration-300 ease-in-out">
+                          <div class="absolute inset-0 bg-blue-900 bg-opacity-75 transition duration-300 ease-in-out"></div>
+                          <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex items-center">
+                            <div>
+                              <div class="text-white text-lg flex space-x-2 items-center">
+                                <div class="bg-white rounded-md p-2 flex items-center">
+                                  <i class="fas fa-clipboard-check fa-sm text-blue-800"></i>
+                                </div>
+                                <p>주변 맛집</p>
+                              </div>
+                              <h3 class="text-white text-3xl mt-2 font-bold">
+                                  10개
+                              </h3>
+                               <h3 class="text-white text-lg mt-2 ">
+                                 현재 위치<span class='font-semibold text-blue-200'>
+                              </h3>
+                            </div>
+                          </div>
+                      </div>        
+                    </div>
+                    
+                  <!-- End Content-->
+              </div>
+          </main>
+        </div>
+    </div>
+</body>
