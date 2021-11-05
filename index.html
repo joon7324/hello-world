@@ -18,10 +18,13 @@
     <script src='http://code.angularjs.org/1.3.14/angular-animate.js'></script>
     <script src="js/index.js"></script>
     
+</head>
 <body >
  <style> 
- body{background-color: #b3d400;}
- font-family: 'Montserrat', sans-serif;     
+ body{background-color: #b3d400;
+      font-family: 'Montserrat', sans-serif;
+}
+ li{background-color: #f5f2d0;}
  </style>
     <div class="flex h-screen w-full " x-data="{openMenu:1}">
         <!--Start SideBar-->
@@ -29,37 +32,37 @@
             <div class="mb-6">
                 <!--Start logo -->
                 <div class="flex justify-center">
-                  <div class="w-14 h-14 rounded-full bg-gray-300 border-2 border-white mt-2">
+                  <button class="w-14 h-14 rounded-full bg-gray-300 border-2 border-white mt-2">
                     <img 
                       src="단추.png" 
                      class="rounded-full w-auto"
                     />
-                  </div>
+                  </button>
                 </div>
                 <!--End logo -->
                 <!--Start NavItem -->
                 <div>
                   <ul class="mt-6 leading-10 px-1">
-                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
-                        <i class="fas fa-utensils fa-lg" style="color: #97b300;"></i>
-                    </li>
-
-                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
-                        <i class="fas fa-calendar-alt fa-lg" style="color: #97b300;"></i>
-                    </li>
-
-                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
-                        <i class="fas fa-user-md fa-lg" style="color: #97b300;"></i>
-                    </li>
-
-                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
-                        <i class="fas fa-comment fa-lg" style="color: #97b300;"></i>
-                    </li>
-        
-                    <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
-                      <i class="fas fa-shopping-basket fa-lg" style="color: #97b300;"></i>
-                    </li>
-
+                      <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;" >
+                          <i class="fas fa-utensils fa-lg" style="color: #97b300;"></i>
+                      </li>
+  
+                      <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                          <i class="fas fa-calendar-alt fa-lg" style="color: #97b300;"></i>
+                      </li>
+  
+                      <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                          <i class="fas fa-user-md fa-lg" style="color: #97b300;"></i>
+                      </li>
+  
+                      <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                          <i class="fas fa-comment fa-lg" style="color: #97b300;"></i>
+                      </li>
+          
+                      <li class="mb-4 p-3 rounded-full flex flex-col items-center justify-center cursor-pointer" style="background-color: #f5f2d0;">
+                        <i class="fas fa-shopping-basket fa-lg" style="color: #97b300;"></i>
+                      </li>
+  
                   </ul>
                 </div>
                 <!--End NavItem -->
@@ -81,19 +84,19 @@
                       <div class="col-span-12 sm:col-span-12 md:col-span-8 lg:col-span-8 xxl:col-span-8">
                         <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 mt-3">
                            <div class="p-4">
-                              <p class="text-xl font-bold">- kg</p>
+                              <input class="text-xl font-bold w-16">kg</input>                       
                               <p class="text-xs font-semibold text-gray-400">체중</p>
                            </div>
                            <div class="p-4">
-                              <p class="text-xl font-bold">- cm</p>
+                            <input class="text-xl font-bold w-16">cm</input>  
                               <p class="text-xs font-semibold text-gray-400">신장</p>
                            </div>
                            <div class="p-4">
-                              <p class="text-xl font-bold">- Kcal</p>
+                            <input class="text-xl font-bold w-24">Kcal</input>   
                               <p class="text-xs font-semibold text-gray-400">오늘의 칼로리 </p>
                            </div>
-                           <div class=" p-4">
-                              <p class="text-xl font-bold">- Kcal</p>
+                           <div class="p-4">
+                            <input class="text-xl font-bold w-24">Kcal</input>  
                               <p class="text-xs font-semibold text-gray-400">권장칼로리</p>
                            </div>
                         </div>
@@ -116,8 +119,8 @@
                               <h3 class="text-center text-white text-lg">
                                    Total Kcal
                               </h3>
-                              <h3 class="text-center text-white text-3xl mt-2 font-bold">
-                                   - Kcal
+                              <h3 class="text-center text-white text-3xl mt-2 font-bold" >
+                                <div id='result'></div>Kcal
                               </h3>
                               <div class="flex space-x-4 mt-4">
                                  <button class="block uppercase mx-auto shadow bg-white text-indigo-600 focus:shadow-outline 
